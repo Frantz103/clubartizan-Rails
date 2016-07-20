@@ -1,0 +1,30 @@
+<section class="width1080 extra-padding-top margin-auto">
+
+
+
+    <% @listings.each do |listing| %>
+    <div class="image-box margin-auto margin-bottom">
+     
+      <%= link_to (image_tag listing.image.url(:small), class:"img-listing" ), listing_path(listing) %>
+      
+    <!--   <p> <%= listing.caption %></p>-->
+     
+    <% if user_signed_in? %>
+    <div>
+ 
+        <%= link_to 'Show', listing %>
+        <%= link_to 'Edit', edit_listing_path(listing) %>
+        <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+    
+    </div>
+   <%end%>
+    </div>
+    
+     <% end %>
+ 
+    
+   
+    
+<!--<%= link_to 'New Listing', new_listing_path %>-->
+
+</section>

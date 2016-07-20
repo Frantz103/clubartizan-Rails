@@ -1,0 +1,27 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profiles {
+
+.img-circle, #image-preview { width: 4em; min-height: 4em; height: 4em;}
+.profile-image { border-radius: 50%;}
+.profile-post-wrapper {
+                      max-width: 18.75em;
+                      width: 100%;
+                      display: inline-block;
+                      vertical-align: top;
+                      padding: 0.95em;
+                      }
+.caption { width: 70%; display: none;}
+.profile-bio { margin: 1.2%; text-align: justify;}
+
+.img-responsive { 
+                 width: 100%;
+                object-fit: cover;
+                min-height: 300px;
+                }
+
+.width1080 { max-width: 1000px;}
+
+}// profile styles end here

@@ -1,0 +1,35 @@
+<div class="extra-padding-top"></div>
+
+    <section class="search-section margin-auto center width1080 min-height--600">
+
+      <div class="image-wrap">
+        <%= form_for @user, url: {action: "update"}, html: { multipart: true } do |f| %>
+       
+              <div class="form-group text-center">
+                <h3>Change your profile image:</h3>
+               <div class="img-circle margin-auto">
+                  <%= profile_avatar_select(@user) %>
+                </div>
+                <%= f.file_field :avatar, onChange: 'loadFile(event)', class: 'file-button' %>
+              </div>
+  
+ <div class="extra-padding-top"></div>
+   
+      
+              <div class="form-group text-center profile-bio">
+                <h3>Update your bio:</h3>
+                <%= f.text_area :bio, label: false, rows: 4 %>
+              </div>
+ 
+ <div class="extra-padding-top"></div>
+
+          <div class="form-group text-center">
+            <%= f.submit "Update Profile", class: 'btn color-red white ' %>
+          </div>
+        <% end %>
+      </div>
+
+  </section>
+
+
+

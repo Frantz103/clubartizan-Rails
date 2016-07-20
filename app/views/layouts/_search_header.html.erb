@@ -1,0 +1,32 @@
+<div class="container search">
+  <div class=" container overlay color-purple">
+    <header>
+      <nav class="nav">
+          <div class="left padding sidemenu">
+         <span class="hamburger"></span>
+        </div>
+        
+          
+          
+            <%= link_to "Club Artizan", root_path, class: "brand logo " %>
+            
+      <div class="menu-link right padding">
+      <% if user_signed_in? %>
+      <%= link_to "Help", help_path %>
+      <%= link_to "New Listing", register_path %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "padding-right" %>
+    
+      <% else %>
+      <%= link_to "Help", help_path %>
+      <%= link_to "Sell with us", new_user_registration_path %>
+      <%= link_to "Log In", new_user_session_path, class: "padding-right" %>
+      <% end %>
+    </div>
+  
+  </nav>
+    </header>
+  
+       <div class=" two-third  margin-auto"><h1 class="extra-padding-top">Hire Local <span id="movingWord"> Artist </span></h1>
+       </div>
+    </div>
+  </div>

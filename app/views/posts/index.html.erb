@@ -1,0 +1,25 @@
+<section class="width1080 extra-padding-top margin-auto">
+
+<!--
+    <% @posts.each do |post| %>
+    <div class="image-box margin-auto card margin-bottom">
+        <%= image_tag post.image.url(:medium) %>
+     
+    
+    <div>
+        <%= link_to 'Show', post %>
+        <%= link_to 'Edit', edit_post_path(post) %>
+        <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    </div>
+    <% end %>
+    -->
+    
+<% @posts.each do |post| %>
+  <%= render 'post', post: post %>
+<% end %>
+ 
+
+<%= link_to 'New Post', new_post_path %>
+
+</section>

@@ -1,0 +1,16 @@
+  
+    <% if user_signed_in? %>
+   
+     <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "padding-right" %></li>
+      <li><%= link_to "Our Stories", ourstories_path%></li>
+      <li><%= link_to "New Listing", register_path %><li>
+     <li> <%= link_to "Help", help_path %></li>
+    
+    <% else %>
+      <li> <%= link_to "Log In", new_user_session_path, class: "padding-right" %></li>
+     <li><%= link_to "Our Stories", ourstories_path%></li>
+     <li> <%= link_to "Sell with us", join_path %></li>
+    <li> <%= link_to "Help", help_path %></li>
+    <% end %> 
+    
+   

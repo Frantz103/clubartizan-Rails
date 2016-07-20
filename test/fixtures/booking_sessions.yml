@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking_time: MyString
+  : 2016-06-09 19:42:50
+  person: MyString
+  : 1
+  location: MyString
+  : MyString
+
+two:
+  booking_time: MyString
+  : 2016-06-09 19:42:50
+  person: MyString
+  : 1
+  location: MyString
+  : MyString

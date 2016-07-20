@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope. 
+ *= require_tree .
+ *= require "base"
+ *= require_self
+ */
+
+ /* large screen and extra large screen */
+
+ @media only screen and (max-width: 1980px) and (min-width: 1501px) {
+.bg {  height: 65em;}
+ }
+
+  @media only screen and (max-width: 1500px) and (min-width: 1407px) {
+
+.bg { height: 62em;}
+}
+ @media only screen and (max-width: 1406px){
+
+ }
+
+ @media only screen and (max-width: 1280px) {
+  
+  h1{ letter-spacing: 0.4em; }
+ }
+
+
+/* medium screen */
+@media only screen and ( max-width: 800px ) {
+ .supporting-box { margin-top: 5%;}
+ h1 { line-height: 40px; }
+ input[type="text"] { width: 86%; }
+ form { /*background: #ff3e96;*/ width: 95%;}
+ #main-search { background: transparent;}
+ .search-button::after {
+  content:"";
+  height: 44px;
+  width: 1px;
+  max-width:6%;
+ }
+a.brand.logo { display: none;}
+
+}
+
+/* large phone and tablet */
+
+@media only screen and (max-width : 600px) {
+ .box { padding-left: 0; padding-top: 35%; }
+  
+  h1 { 
+       letter-spacing: normal;
+       line-height: 1em;
+     }
+
+ .bg { height: 35em; }
+
+  input[type="text"] { width: 81.5%;}
+
+}
+
+/* other small phones */
+@media only screen and (max-width : 480px) {
+                   h1 { text-align: left;}
+                   .little-box { height: 4em;}
+                   p { font-size: 16px;}
+
+  .ourstories div.two-third.margin-auto {margin-top: 20%; padding-left: 10%; }
+
+  .expand { 
+     min-width: 320px;
+    .hamburger {margin-right: 7%;} 
+  }
+  .menu-cta { 
+    .left { margin-left: auto; margin-right: auto;  margin-top: 6%; float: none; margin-bottom: 10%;}
+  .right{ margin-right: auto; margin-left: auto;  margin-top: 6%; float: none;}
+  padding-top: 10%;
+   }
+
+}
+
+@media only screen and (max-width: 475px) {
+
+.flex--column-reverse { -moz-flex-flow: column-reverse nowrap!important; -webkit-flex-flow: column-reverse nowrap!important;}
+.flex--column {-webkit-flex-flow: column nowrap; -moz-webkit-flex-flow: column nowrap; flex-flow: column nowrap;}
+.card { box-shadow: none;}
+
+  div.half.left.flex, div.hire-painter.half.right.clearfix,
+  div.hire-photographer.half.left, div.half.right.flex { width: 100%;}
+  input[type="text"] { width: 70%; }
+  .search-button{ width: 87px; }
+
+} /*end here for media screen 475px */
+
+@media only screen and (max-width: 320px) {
+
+
+ .overlay{ background: rgba(255, 0, 155, 0.65)};
+ .search-button{ width: 25%; }
+ .menu-link a {letter-spacing: 1px; padding-left: 0.729em;}
+}

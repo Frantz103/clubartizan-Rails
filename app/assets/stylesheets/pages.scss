@@ -1,0 +1,159 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+
+// Menu
+
+.menu {
+  display: block;
+  margin-bottom: 4px;
+  width: 22px;
+  height: 1.5px;
+  border-radius:  1px;
+  background-color: #fff;
+}
+
+nav a {
+ color: #fff; 
+ letter-spacing: 3.5px;
+ font-family: QuickSand;
+}
+
+// Header
+h1 { 
+font-size: 1.4rem;
+text-transform: uppercase;
+text-align: center;
+font-weight: bold;
+-webkit-font-smoothing: antialiased;
+color: #fff;
+letter-spacing: 0.8em;
+line-height: 75px;
+}
+
+.little-box, .supporting-box {
+width: 50%;
+min-width: 270px;
+height: 5em;
+max-height: 125px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.supporting-box > p { color: #fff;}
+
+.bg {
+  background: asset_url('arti-background.jpg') no-repeat center; 
+  background-size: cover;
+  width: 100%;
+  height: 50em;
+}
+
+.box { padding-top: 20%; padding-left: 5%; }
+
+//footer
+footer { vertical-align: middle; }
+
+// Search page
+ .search {
+  background: asset_url('search-painting.jpg') no-repeat center; 
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+ }
+
+ h2 {
+ text-align: center;
+ letter-spacing: 2.5px;
+ font-weight: normal;
+ }
+p { text-align: left; }
+
+.search-box , form {
+  max-width: 800px;
+  width: 100%;
+  height: 44px;
+  }
+
+input[type="text"],textarea {
+  max-width: 716px;
+  font-size: 16px;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  width: 90%;
+  height: 40px;
+}
+
+.profiles {
+  textarea { 
+      width: 91.5%;
+      height: 200px;
+      font-size: 18px;
+      color: #595959;
+      letter-spacing: 2px;
+      line-height: 170%;
+      padding-top: 3%;
+      text-align: justify;
+      }
+}
+
+button { 
+font-size: 13px;
+background-color: rgb(255,62,150);
+border: 1px rgb(255,62,150);
+color: #fff;
+position: relative;
+/*left: -1%;*/
+cursor: pointer;
+}
+
+.search-button { width: 70px; height: 44px;}
+
+
+@-moz-document url-prefix() { 
+ input[type="text"]{
+    max-width: 714px;
+    width: 90%;
+  }
+  .search-button {height: 46px;}
+}
+
+::-webkit-input-placeholder {font-size: 16px; }
+::-moz-placeholder{ font-size: 16px;}
+:-ms-input-placeholder{font-size:16px;}
+::-webkit-placeholder {text-overflow:ellipsis;}
+*:focus {outline: none;}
+
+.hire-painter{ background: asset_url('hire-a-painter');  height: 315px; }
+.hire-photographer { background: asset_url('hire-a-camera'); height: 315px;}
+
+// Styles for the main app  goes here.
+
+ .app-header { height: 100px;}
+ .menu-link a { letter-spacing: 1px; padding-left: 1.5em; }
+
+ // sign-page
+  .signin-wrap { background-image: asset_url('clubartizan-low.jpg'); }
+
+  .signin-wrap {
+
+  h3 { letter-spacing: 3.5px;
+        font-family: QuickSand;
+        font-weight: normal;
+        text-decoration: none; 
+          }
+      input { width: 90%; height: 30px; margin: 10px; font-size: 0.889em; letter-spacing: 2px; padding-left: 10px; }
+     .btn { width: 94%}
+
+      @-moz-document url-prefix() { 
+        input[type="text"]{ width: 90%; }
+    }
+  }
+
+  // temporary code for mobile page for our stories page
+  @media only screen and (max-width: 320px) {
+
+  div.half.left.flex, div.hire-painter.half.right.clearfix,
+  div.hire-photographer.half.left, div.half.right.flex { width: 100%;}
+ .bg { background: asset-url('arti-background-small.jpg') no-repeat center; height: 32em;}
+  }

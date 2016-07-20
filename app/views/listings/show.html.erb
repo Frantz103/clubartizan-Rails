@@ -1,0 +1,20 @@
+<section class="width1080 extra-padding-top margin-auto">
+  <div class="listing">
+    <div class="listing-header">
+      <div class="name">
+       <%= link_to listing.user.user_name, profile_path(listing.user.user_name) %>
+
+      </div>
+    </div>
+    <div class="image-box center-block">
+    
+        <%= image_tag listing.image.url(:small) %>
+    </div>
+    <p class="caption">
+      <%= @listing.caption %>
+    </p>
+    <div class="text-center">
+      <%= link_to "Cancel", listings_path %>
+    </div>
+  </div>
+</section>

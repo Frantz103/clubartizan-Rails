@@ -1,0 +1,27 @@
+// Place all the styles related to the listings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image-box {
+  max-width: 400px;
+}
+
+img {
+  width: 100%;
+}
+
+@media only screen and ( min-width: 800px ) {
+
+.image-box {
+  max-width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1%;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+}

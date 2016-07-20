@@ -1,0 +1,2 @@
+class Artie < ApplicationMailer
+end

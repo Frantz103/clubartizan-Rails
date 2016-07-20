@@ -1,0 +1,41 @@
+{
+	"name": "ClubArtizan",
+	"icons": [
+		{
+			"src": "/assets/favicon/android-chrome-36x36-368bfc982a4bb613014aca60c89fc0724cafc30aaef5b96d0fc00c7c8aa938d1.png",
+			"sizes": "36x36",
+			"type": "image\/png",
+			"density": 0.75
+		},
+		{
+			"src": "/assets/favicon/android-chrome-48x48-5046c4f0a4ea06665127583992ab1109d9b1b04a94cef8c1a9f60a42204684f2.png",
+			"sizes": "48x48",
+			"type": "image\/png",
+			"density": 1
+		},
+		{
+			"src": "/assets/favicon/android-chrome-72x72-de557ece441d873651ec2e8cab0e821523bf8f02adc7859f154de1b38efa83ff.png",
+			"sizes": "72x72",
+			"type": "image\/png",
+			"density": 1.5
+		},
+		{
+			"src": "/assets/favicon/android-chrome-96x96-935de78f516f483c5fa42f73d5ed7bb0fa624aac96dda30c8373de75f934faa9.png",
+			"sizes": "96x96",
+			"type": "image\/png",
+			"density": 2
+		},
+		{
+			"src": "/assets/favicon/android-chrome-144x144-90c8464ec4eae54063eb6dee304190cc863985b8f095afdd8005344f5d478579.png",
+			"sizes": "144x144",
+			"type": "image\/png",
+			"density": 3
+		},
+		{
+			"src": "/assets/favicon/android-chrome-192x192-165dd6757edf2ee1d155abd75a6ae775bef6d5954a4253c0713643d6b39a1a8d.png",
+			"sizes": "192x192",
+			"type": "image\/png",
+			"density": 4
+		}
+	]
+}

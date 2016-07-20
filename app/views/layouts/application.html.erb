@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Club Artizan | The Artisans Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow" />
+  <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
+  <%= render 'favicon' %>
+
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= render "layouts/inline_script" %>
+ <style>
+    .brand { position: relative; left: 42%; top: 10%; }
+  </style>
+
+</head>
+<% if current_page?('/signin') || current_page?('/register') %>
+  <body class="signin-wrap">
+<%else%>
+  <body class="<%= controller_name %> <%= action_name %>">
+<% end %>
+
+
+   <div class="sidemenu ">
+   <div class="responsive-menu">
+   <div class="close app-header color-red">
+   <span class="hamburger"></span>
+   </div>
+     <p class="menu-brand"> <a class="menu-brand" href="https://clubartizan.com">Club Artizan</a> </p>
+     <ul class="menu-link">
+    <%= render "layouts/menu" %>
+    </ul>
+     <div class="menu-cta">
+    <div class="cta-button left">
+    <p> <%= link_to "Craft with us", join_path %></p>
+   </div>
+    
+    
+       <div class="cta-button right">
+    <p><%= link_to " Become a supporter ", support_path %></p>
+    </div>
+    
+    </div><!-- menu cta end -->
+    
+    </div>    
+    </div><!-- Responsive menu end -->
+
+
+<div class="container">
+
+    <%  if current_page?(root_path)%>
+        <%= render "layouts/home_header" %>
+    <% elsif current_page?('/ourstories') %>
+          <%= render "layouts/search_header" %> 
+    <% elsif current_page?('/signin') || current_page?('/register')%>
+           <%= render "layouts/mini_header" %>
+    <% elsif  current_page?( '/users/sign_in') || current_page?('/users/sign_up') || current_page?('/galleries/new') ||  current_page?('/galleries/edit') %>
+    <%= render "layouts/mini_header" %>
+    <% else %>
+         <%= render "layouts/header" %>
+    <% end %>
+ 
+
+
+ <main class="clearfix">
+    <%= yield %>
+    <div class=" flash width1080 margin-auto">
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+    </div>
+</main>
+ 
+
+
+<% unless current_page?('/signin') || current_page?('/register') %>
+  <%= render "layouts/footer" %>
+<% end %>
+</div>
+</body>
+
+</html>

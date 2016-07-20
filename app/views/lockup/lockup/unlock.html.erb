@@ -1,0 +1,64 @@
+<style>
+a { color: #fff;}
+.float-right { text-align: center;     width: 50%; min-width: 300px;}
+.icon { float: right; padding-right: 10px; width: 50px;}
+.icon img { width:1.7em;}
+</style>
+
+<div class="box margin-auto">
+        <div class="little-box">
+          <h1>Project Club Artizan </h1>
+        </div>
+        <div class="supporting-box">
+          <p>Thank you for visiting Project Club Artizan. To critic the app put the code in the box bellow and press enter</p>
+        </div>
+          <div class="supporting-box"></div>
+<% if @wrong %>
+    <div class="hmm supporting-box">
+      <p>Hmm&hellip; that doesn&#8217;t seem right.It's easy to guess? or email me at <a href="mailto:hirefrantz@gmail.com?Subject=Can%20I%20Have%20the%20passcode%20for%20your%20app" target="_top">hirefrantz@gmail.com</a></p>
+    </div>
+<% end %>
+
+    <div class="supporting-box margin-auto">
+<%= form_for :lockup, url: { action: 'unlock' } do |form| %>
+  <% unless @wrong == true %>
+    <p><%= form.password_field "codeword", placeholder: "the code " %></p>
+  <% else %>
+    <p><%= form.password_field "codeword", value: @codeword, class: 'nope' %></p>
+  <% end %>
+    
+  <% if lockup_hint_present? %>
+    <p id='hint_icon'>?</p>
+    <p id='hint'><%= lockup_hint_display %></p>
+  <% end %>
+
+  <% if params[:return_to].present? %>
+    <%= form.hidden_field "return_to", value: params[:return_to] %>
+  <% elsif @return_to.present? %>
+    <%= form.hidden_field "return_to", value: @return_to %>
+  <% end %>
+    
+  <p><%= button_tag "enter" %></p>
+     </div>
+<% end %>
+
+<p class="float-right"> <a href="mailto:hirefrantz@gmail.com?Subject=Can%20I%20Have%20the%20passcode%20for%20your%20app" target="_top">Request the code here</a><p>
+        
+</div>
+<div class="icon">
+   <i>
+ <a href="https://facebook.com/clubartizan"> <%= image_tag( "icons/icon-fb.png") %></a>
+   </i>
+</div>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77799990-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ 
+

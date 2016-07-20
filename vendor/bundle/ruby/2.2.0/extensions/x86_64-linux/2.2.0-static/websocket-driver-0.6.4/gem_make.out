@@ -1,0 +1,11 @@
+/home/frantz/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160530-4457-fiusr9.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20160530-4457-ge0gx4

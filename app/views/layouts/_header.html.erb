@@ -1,0 +1,47 @@
+<header class="app-header box-shadow-2d color-red">
+ <nav class="nav">
+    <div class="left padding sidemenu">
+    
+      <span class="hamburger"></span>
+    </div>
+    
+        <%= link_to "Club Artizan", root_path, class: "brand logo white" %>
+    
+    <div class="menu-link right padding">
+    <% if user_signed_in? %>
+      <%= link_to "Help", help_path %>
+      <%= link_to "New Listing", register_path %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "padding-right" %>
+    
+    <% else %>
+      <%= link_to "Help", help_path %>
+      <%= link_to "Sell with us", new_user_registration_path %>
+      <%= link_to "Log In", new_user_session_path, class: "padding-right" %>
+    <% end %>
+      
+    </div>
+  </nav>
+  
+  
+
+
+
+<!--
+    <form class="margin-auto" id="main-search" action="/browse" method="get">
+      <input type="text" placeholder="I want to hire a photographer..." aria-required="true"/>
+     <button class=" search-button right clearfix" type="submit">Search</button>
+    </form> -->
+    
+  <%= form_tag(posts_path, :method => "get", id: "main-search", class:"margin-auto") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "I want to hire a photographer..." %>
+  <%= button_tag "Search", class:"search-button right ", :name => nil %>
+<% end %>
+
+  
+</header>
+
+  
+
+ 
+ 
+

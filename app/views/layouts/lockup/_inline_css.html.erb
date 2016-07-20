@@ -1,0 +1,105 @@
+body{ margin:0; padding:0; background:#d81b60; overflow-x: hidden;}
+
+.container {height: 50em;} 
+.little-box{ margin-bottom: 1.5%;} 
+input, button {width: 40%; min-width: 240px;
+ height: 30px; 
+ border: 1px solid #fff;
+-webkit-border-radius: 1.5em;
+-moz-border-radius: 1.5em;
+  border-radius: 1.5em; 
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   }
+    
+form{ text-align: center;}
+input{font-size: 12px;}
+::-webkit-input-placeholder {font-size: 12px; }
+::-moz-placeholder{ font-size: 12px;}
+:-ms-input-placeholder{font-size:12px;}
+
+
+button {
+    background-color: #ff3e96;
+    border: #ff3e96;
+    height: 35px;
+ 	min-width: 244px;
+ 	-webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+   }
+   
+input#lockup_codeword {
+text-align: center; 
+clear: both;     
+box-sizing: border-box;
+width: 248px;
+height: 35px;
+    }
+    
+.little-box, .supporting-box {
+width: 50%;
+min-width: 270px;
+/*height: 5em;
+max-height: 125px;*/
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.box { padding-top: 20%; padding-left: 5%; }
+
+.color-red {background:#d81b60;}
+.clearfix { clear: both; }
+
+// Base Styles
+.margin-auto { margin-left: auto; margin-right: auto;}
+
+.little-box {
+border-top: 1.5px solid #fff;
+border-bottom: 1.5px solid #fff;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: "Liberation Sans", sans-serif; }
+p { 
+font-size: 18px; 
+color: #595959;
+letter-spacing: 2px;
+line-height: 150%;
+}
+
+p, a, li {
+  font-family: "Garamond", serif;
+  text-decoration: none;
+}
+
+p, h1 { color: #fff;}
+h1 { letter-spacing: 4px;}
+
+.box { 
+position: relative;
+left: 20%;
+}
+
+@media only screen and (max-width: 800px) {
+h1 { letter-spacing: 2px;}
+.little-box {margin-bottom: 5%;}
+}
+
+@media only screen and (max-width: 480px) {
+.little-box {margin-bottom: 12.5%;} 
+form { margin-top: 8%;}
+p {text-align: justify;}
+
+button { width: 248px;}
+
+p:last-child{ text-align: center;}
+.box{
+position: static;
+width: 90%;
+margin: 5%;
+padding-left:0;
+	}
+ .supporting-box,.little-box { width: 100%; margin-top: 4%;}
+}

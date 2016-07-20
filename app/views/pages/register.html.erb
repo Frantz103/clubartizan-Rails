@@ -1,0 +1,20 @@
+ 
+<div class=" overlay color-purple">
+<header class="app-header">
+<div class="nav padding flex">
+            <%= link_to "Club Artizan", root_path, class: "logo" %>
+</div>
+</header>
+
+
+<div class="third  margin-auto">
+<%= form_for (register_path) do |f| %>
+<%= f.text_field :first_name, :placeholder => "First Name" %>
+<%= f.text_field :last_name, :placeholder => "Last Name" %>
+<%= f.email_field :email, :placeholder => "Email" %>
+<%= f.password_field :password, :placeholder => "Password" %>
+<%= f.submit "Create my account", class: "btn color-red white" %>
+<% end %>
+</div>
+</div>
+

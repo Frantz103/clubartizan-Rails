@@ -1,0 +1,12 @@
+/home/frantz/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160530-4457-1yfkh8t.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling rubymain.cpp
+compiling mapper.cpp
+linking shared-object fastfilereaderext.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20160530-4457-1v840c

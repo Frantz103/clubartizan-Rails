@@ -1,0 +1,44 @@
+<section class="search-section margin-auto extra-padding-top width1080">
+  <h2 class="padding font-secondary color-grey"> When you hire local artists in our platform,  50% off our profit will go to help support  artist in developping countries.
+  </h2>
+
+
+<div class="search-box margin-auto extra-padding-top flex">
+  <%= form_tag(posts_path, :method => "get", id: "main-search", class:"margin-auto") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "I want to hire a photographer..." %>
+  <%= button_tag "Search", class:"search-button right clearfix", :name => nil %>
+  <%end%>
+</div>
+</section>
+
+<div class="extra-padding-top"></div>
+<section class=" card margin-auto margin-top flex flex--column-reverse width1080">
+  <div class=" half left flex">
+    <p class="extra-margin"> Choose any picture you have and turn it into a real painting. We will let you comission an art student or a painter in a developping country.</p>
+  </div>
+  <div class=" hire-painter half right clearfix">
+    <div class="overlay color-black flex">
+    <h2 class="extra-padding-top white"> Hire a Painter</h2>
+    </div>
+  </div>
+
+</section>
+
+<section class=" card margin-auto margin-top flex flex--column width1080">
+<div class="hire-photographer half left">
+    <div class="overlay color-black flex">
+    <h2 class="extra-padding-top white"> Hire a Photographer</h2>
+    </div>
+  </div>
+  <div class="half right flex">
+    <p class="extra-margin">  Whether its for your online store or for your social media or blog.  Whether its for your graduation, or you need a back up photographer for your wedding. We can help you find a photographer.</p>
+  </div>
+</section>
+
+<section class="search-section margin-auto center width1080">
+  <h2 class="extra-padding-top font-secondary color-grey"> Connect with Club Artizan</h2>
+  <p class="extra-padding-top padding"> Click on the link below to start exploring the application. You can also download the app for IOS and Andriod. Thank you for visiting and we look forward to creating something great for you .
+  </p>
+  <a href="/browse" class="white"><button class="btn-md">Continue to the site as a Guest
+  </button></a>
+</section>

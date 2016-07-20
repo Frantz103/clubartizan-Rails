@@ -1,0 +1,19 @@
+<h1> Upload Listing </h1>
+<div class="min-height--600">
+<%= form_for(@listing) do |f| %>
+
+
+  <div class="image">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :caption %><br>
+    <%= f.text_field :caption %>
+  </div>
+   
+   <div class="actions">
+    <%= f.submit 'upload', class: "btn color-red white" %>
+  </div>
+<% end %>
+</div>

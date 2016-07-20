@@ -1,0 +1,43 @@
+<div class="extra-padding-top"></div>
+
+    <section class="search-section margin-auto center width1080 ">
+      <div class="img-circle margin-auto">
+        <%= profile_avatar_select(@user) %>
+    
+    </div>
+    
+      <div class="user-box">
+       <!-- <p class="center">Hello I am  <%= @user.user_name %> </p>-->
+        <div class="extra-padding-top">
+          <% if @user == current_user %>
+            <%= link_to 'Edit Profile', edit_profile_path(@user.user_name),  class: "profile-button" %>
+            <%= link_to 'Create A Booking Session', new_booking_path(@user.user_name),  class: "profile-button" %>
+            <%= link_to 'Create New Post', new_post_path(@user.user_name),  class: "profile-button" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="extra-padding-top">
+      <p class="profile-bio">
+        <%= @user.bio %>
+      </p>
+      <!--
+      <div class="user-statistics">
+        <p>
+          <%= pluralize @user.posts.count, 'post' %>
+        </p>
+      </div> -->
+     </div>
+    </section>
+
+  <div class="extra-padding-top"></div>
+
+<section class="search-section margin-auto  width1080">
+<aside class="margin-auto ">
+
+<% @posts.each do |post| %>
+<div class=" profile-post-wrapper">
+  <%= render 'posts/post', post: post %>
+</div>
+<% end %>
+</aside>
+</section>

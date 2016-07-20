@@ -1,0 +1,23 @@
+<section class="width1080 extra-padding-top margin-auto min-height--600">
+  <div class="post">
+    <div class="post-header">
+      <div class="name">
+      <p><%= link_to @post.user.user_name, profile_path(@post.user.user_name) %><p>
+      </div>
+    </div>
+
+   <%= render 'post', post: @post %>
+     <% if  @post.user == current_user %>
+      
+   <div class="text-center">
+       <%= link_to "Edit Post", edit_post_path(@post)%> | <%= link_to "Cancel", posts_path %>
+    </div>
+     
+    <%else%>
+      <div class="text-center extra-padding-top search-button">
+      <button class="search-button""><%= link_to "Back", posts_path%></button>
+    </div>
+    <%end%>
+  </div>
+ 
+</section>

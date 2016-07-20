@@ -1,0 +1,12 @@
+// Place all the styles related to the bookings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bookings {
+
+label.string.required,
+label.decimal.required,
+label.text.optional { width:100%; display: inline-block; padding: 0.8em 0; color: #595959; letter-spacing: 2px;}
+abbr{ display: none;}
+
+}
