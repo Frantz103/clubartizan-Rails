@@ -27,7 +27,7 @@ gem 'lockup', '~> 1.3', '>= 1.3.2.1'
 #for mem-cache
 gem 'dalli', '~> 2.7', '>= 2.7.6'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '~> 1.0.0', group: :doc
 
 gem 'rack-cache', '~> 1.6', '>= 1.6.1',  :require => 'rack/cache'
 
