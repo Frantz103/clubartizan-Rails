@@ -37,7 +37,7 @@ gem 'devise', '~> 4.0'
 
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
-gem 'private_pub'
+gem 'private_pub', '>= 1.0.3'
 gem 'thin'
 
 gem  'stripe'
