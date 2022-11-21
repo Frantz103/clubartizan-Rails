@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.0'
 # for lock up gem
 gem 'lockup', '~> 1.3', '>= 1.3.2.1'
 #for mem-cache
-gem 'dalli', '~> 2.7', '>= 2.7.6'
+gem 'dalli', '~> 3.2', '>= 3.2.3'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
