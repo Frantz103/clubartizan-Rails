@@ -23,7 +23,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # for lock up gem
-gem 'lockup', '~> 1.3', '>= 1.3.2.1'
+gem 'lockup', '~> 1.7', '>= 1.7.1'
 #for mem-cache
 gem 'dalli', '~> 2.7', '>= 2.7.6'
 # bundle exec rake doc:rails generates the API under doc/api.
